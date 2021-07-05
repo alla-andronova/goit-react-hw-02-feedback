@@ -45,7 +45,14 @@ export default class App extends Component {
             positivePercentage={this.countPositiveFeedbackPercentage()}
           />
         ) : (
-          <p>No feedback given.</p>
+          <p
+            style={{
+              textAlign: 'center',
+              fontSize: 'larger',
+            }}
+          >
+            No feedback given.
+          </p>
         )}
       </>
     );

@@ -1,18 +1,24 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Section from '../section/Section';
+import s from './Statistics.module.css';
 
 const Statistics = ({ feedbacks, total, positivePercentage }) => {
   return (
     <Section title="Statistics">
-      <ul>
+      <ul className={s.list}>
         {Object.entries(feedbacks).map(([k, v]) => (
-          <li key={k}>
-            {k} : {v}
+          <li key={k} className={s.item}>
+            {k} : <span className={s.wrapper}> {v}</span>
           </li>
         ))}
-        <li>Total : {total}</li>
-        <li>Positive Feedback : {positivePercentage}%</li>
+        <li className={s.item}>
+          Total : <span className={s.wrapper}>{total}</span>
+        </li>
+        <li className={s.item}>
+          % Positive Feedback :{' '}
+          <span className={s.wrapper}>{positivePercentage}</span>
+        </li>
       </ul>
     </Section>
   );

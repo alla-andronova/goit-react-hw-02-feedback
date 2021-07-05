@@ -4,7 +4,11 @@ import PropTypes from 'prop-types';
 const Section = ({ title, children }) => {
   return (
     <>
-      <p>{title}</p>
+      <p
+        style={{ textAlign: 'center', fontSize: 'larger', fontWeight: 'bold' }}
+      >
+        {title}
+      </p>
       {children}
     </>
   );
